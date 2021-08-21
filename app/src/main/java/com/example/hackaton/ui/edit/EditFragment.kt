@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.hackaton.Place
@@ -51,6 +52,13 @@ class EditFragment : Fragment() {
                 editLatitude.getText().toString().toDouble(),
                 editHistory.getText().toString())
             mDatabase.push().setValue(p)
+
+            editName.setText("")
+            editLongitude.setText("")
+            editLatitude.setText("")
+            editHistory.setText("")
+
+            Toast.makeText(context, "запись успешно добавлена", Toast.LENGTH_SHORT).show()
         }
 
         return root
