@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Долгота"
-            android:inputType="numberSigned" />
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/editLatitude"
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Широта"
-            android:inputType="numberSigned" />
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/editHistory"
