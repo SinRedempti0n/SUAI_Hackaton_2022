@@ -1,4 +1,4 @@
-package com.example.hackaton.ui.notifications
+package com.example.hackaton.ui.edit
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,13 +8,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.hackaton.R
-import com.example.hackaton.databinding.FragmentNotificationsBinding
+import com.example.hackaton.databinding.FragmentEditBinding
 
-class NotificationsFragment : Fragment() {
+class EditFragment : Fragment() {
 
-  private lateinit var notificationsViewModel: NotificationsViewModel
-private var _binding: FragmentNotificationsBinding? = null
+  private lateinit var editViewModel: EditViewModel
+private var _binding: FragmentEditBinding? = null
   // This property is only valid between onCreateView and
   // onDestroyView.
   private val binding get() = _binding!!
@@ -24,16 +23,14 @@ private var _binding: FragmentNotificationsBinding? = null
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View? {
-    notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+    editViewModel =
+            ViewModelProvider(this).get(EditViewModel::class.java)
 
-    _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+    _binding = FragmentEditBinding.inflate(inflater, container, false)
     val root: View = binding.root
 
-    val textView: TextView = binding.textView
-    notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
-      textView.text = it
-    })
+
+
     return root
   }
 
