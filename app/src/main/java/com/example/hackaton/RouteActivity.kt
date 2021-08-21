@@ -4,7 +4,6 @@ import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-
 import androidx.navigation.ui.setupWithNavController
 import com.example.hackaton.databinding.ActivityRouteBinding
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -13,8 +12,6 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-
 
 class RouteActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -34,17 +31,5 @@ class RouteActivity : AppCompatActivity(), OnMapReadyCallback {
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
 
         navView.setupWithNavController(navController)
-    }
-
-
-    override fun onMapReady(mMap: GoogleMap) {
-
-        // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
-        mMap.addMarker(
-            MarkerOptions()
-            .position(sydney)
-            .title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
     }
 }
