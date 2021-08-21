@@ -13,7 +13,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.firebase.database.DatabaseReference
 
-class RouteActivity : AppCompatActivity(), OnMapReadyCallback {
+class RouteActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRouteBinding
     lateinit var mDatabase: DatabaseReference
