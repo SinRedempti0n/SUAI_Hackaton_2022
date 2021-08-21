@@ -4,7 +4,13 @@
     <string name="load_done">Done…</string>
 
     <string name="app_name">Hackaton</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_home">List</string>
+    <string name="title_dashboard">Map</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title">Title</string>
+    <string name="content_description_media">content desription</string>
+    <string name="secondary_text">secondary txt</string>
+    <string name="supporting_text">supporting txt</string>
+    <string name="action_1">action_1</string>
+    <string name="action_2">action_2</string>
 </resources>
