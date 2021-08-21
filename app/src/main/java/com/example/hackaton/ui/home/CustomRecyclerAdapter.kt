@@ -6,9 +6,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.hackaton.Place
 import com.example.hackaton.R
 
-class CustomRecyclerAdapter(private val names: List<String>) :
+class CustomRecyclerAdapter(private val places: List<Place>) :
     RecyclerView.Adapter<CustomRecyclerAdapter.MyViewHolder>() {
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -36,12 +37,12 @@ class CustomRecyclerAdapter(private val names: List<String>) :
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.textTitle?.text = "Name"
-        holder.textSecondary?.text = "Description"
-        holder.textSupporting?.text = "Info"
+        holder.textTitle?.text = places[position].name
+        holder.textSecondary?.text = places[position].history
+        holder.textSupporting?.text = places[position].longitude.toString() + " " + places[position].latitude.toString()
 
         holder.photoBackground?.setImageResource(R.drawable.ic_launcher_background)
     }
 
-    override fun getItemCount() = names.size
+    override fun getItemCount() = places.size
 }

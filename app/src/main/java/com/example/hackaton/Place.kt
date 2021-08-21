@@ -19,4 +19,11 @@ class Place{
         this.history = history
     }
 
+//    constructor(){
+//        this.id = "null_id"
+//        this.name = "null_name"
+//        this.longitude = 0.0
+//        this.latitude = 0.0
+//        this.history = "history"
+//    }
 }

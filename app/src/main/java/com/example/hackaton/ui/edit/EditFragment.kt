@@ -42,9 +42,9 @@ class EditFragment : Fragment() {
         val editHistory: EditText = root.findViewById(R.id.editHistory)
         val buttonAdd: Button = root.findViewById(R.id.buttonAdd)
 
+
+
         buttonAdd.setOnClickListener {
-
-
             val p: Place = Place(mDatabase.getKey().toString(),
                 editName.getText().toString(),
                 editLongitude.getText().toString().toDouble(),
