@@ -36,5 +36,11 @@
             android:hint="Широта"
             android:inputType="numberSigned" />
 
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,14 +32,8 @@ class RouteActivity : AppCompatActivity(), OnMapReadyCallback {
         val navView: BottomNavigationView = binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        //val appBarConfiguration = AppBarConfiguration(setOf(
-        //    R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications))
-        //setupActionBarWithNavController(navController, appBarConfiguration)
+
         navView.setupWithNavController(navController)
-        mDatabase = FirebaseDatabase.getInstance().getReference(USER_KEY)
-        mDatabase.push().setValue(Point("Новгородская область", 58.422, 32.3836))
     }
 
 
