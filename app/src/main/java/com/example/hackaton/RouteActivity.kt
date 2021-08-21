@@ -10,14 +10,17 @@ import com.example.hackaton.databinding.ActivityRouteBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 
 class RouteActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var binding: ActivityRouteBinding
+    lateinit var mDatabase: DatabaseReference
+    val USER_KEY: String = "User"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +38,8 @@ class RouteActivity : AppCompatActivity(), OnMapReadyCallback {
         //    R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications))
         //setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
+        mDatabase = FirebaseDatabase.getInstance().getReference(USER_KEY)
+        mDatabase.push().setValue(Point("Новгородская область", 58.422, 32.3836))
     }
 
 
