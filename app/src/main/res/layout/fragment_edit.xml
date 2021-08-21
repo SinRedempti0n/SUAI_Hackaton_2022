@@ -21,19 +21,19 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editLongitude"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Долгота"
-            android:inputType="number|numberDecimal" />
-
-        <EditText
             android:id="@+id/editLatitude"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Широта"
+            android:inputType="number|numberDecimal" />
+
+        <EditText
+            android:id="@+id/editLongitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Долгота"
             android:inputType="number|numberDecimal" />
 
         <EditText
