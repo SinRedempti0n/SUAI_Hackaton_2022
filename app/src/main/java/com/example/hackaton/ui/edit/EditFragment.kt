@@ -45,20 +45,27 @@ class EditFragment : Fragment() {
 
         buttonAdd.setOnClickListener {
 
-
-            val p: Place = Place(mDatabase.getKey().toString(),
-                editName.getText().toString(),
-                editLongitude.getText().toString().toDouble(),
-                editLatitude.getText().toString().toDouble(),
-                editHistory.getText().toString())
-            mDatabase.push().setValue(p)
+            if(editLongitude.getText().toString() == "" || editLatitude.getText().toString() == ""
+                || editName.getText().toString() == "") {
+                Toast.makeText(context, "первые три поля не могут быть пустыми",
+                    Toast.LENGTH_SHORT).show()
+            }
+            else {
+                val p: Place = Place(
+                    mDatabase.getKey().toString(),
+                    editName.getText().toString(),
+                    editLongitude.getText().toString().toDouble(),
+                    editLatitude.getText().toString().toDouble(),
+                    editHistory.getText().toString()
+                )
+                mDatabase.push().setValue(p)
+                Toast.makeText(context, "запись успешно добавлена", Toast.LENGTH_SHORT).show()
+            }
 
             editName.setText("")
             editLongitude.setText("")
             editLatitude.setText("")
             editHistory.setText("")
-
-            Toast.makeText(context, "запись успешно добавлена", Toast.LENGTH_SHORT).show()
         }
 
         return root
