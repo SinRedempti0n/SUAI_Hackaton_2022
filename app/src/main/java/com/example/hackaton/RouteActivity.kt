@@ -39,7 +39,7 @@ class RouteActivity : AppCompatActivity(), OnMapReadyCallback {
         //setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         mDatabase = FirebaseDatabase.getInstance().getReference(USER_KEY)
-        mDatabase.push().setValue(Point("Новгородская область", 58.422, 32.3836))
+        //mDatabase.push().setValue(Point("Новгородская область", 58.422, 32.3836, ""))
     }
 
 

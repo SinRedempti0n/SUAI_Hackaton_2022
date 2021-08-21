@@ -36,5 +36,22 @@
             android:hint="Широта"
             android:inputType="numberSigned" />
 
+        <EditText
+            android:id="@+id/editHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="История"
+            android:inputType="textMultiLine"
+            android:lines="7"/>
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="добавить"
+            android:textAlignment="center" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
