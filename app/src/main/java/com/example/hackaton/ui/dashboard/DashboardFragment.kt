@@ -5,10 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.hackaton.databinding.FragmentDashboardBinding
 import com.google.android.gms.maps.model.LatLng
 import androidx.lifecycle.ViewModelProvider
 import com.example.hackaton.R
+import com.example.hackaton.databinding.FragmentDashboardBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback

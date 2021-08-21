@@ -6,18 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.hackaton.databinding.ActivityRouteBinding
-import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
 import com.google.firebase.database.DatabaseReference
 
 class RouteActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRouteBinding
-    lateinit var mDatabase: DatabaseReference
-    val USER_KEY: String = "User"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
