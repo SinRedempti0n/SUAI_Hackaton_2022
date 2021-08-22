@@ -56,7 +56,8 @@ class EditFragment : Fragment() {
                     editName.getText().toString(),
                     editLongitude.getText().toString().toDouble(),
                     editLatitude.getText().toString().toDouble(),
-                    editHistory.getText().toString()
+                    editHistory.getText().toString(),
+                    "---"
                 )
                 mDatabase.push().setValue(p)
                 Toast.makeText(context, "запись успешно добавлена", Toast.LENGTH_SHORT).show()

@@ -1,6 +1,7 @@
 package com.example.hackaton
 
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -20,9 +21,8 @@ class RouteActivity : AppCompatActivity() {
 
 
         val navView: BottomNavigationView = binding.navView
-
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
-
         navView.setupWithNavController(navController)
+
     }
 }
