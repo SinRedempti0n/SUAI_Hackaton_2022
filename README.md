@@ -1,33 +1,19 @@
-<p align="center">
-    <h1 align="center">ВАЖНО!!!</h1>
-    </p>
-<p>Не указывать название команды, не указывать наименование хакатона и название проекта.</p>
-<p>Ниже приведено то что должно быть в вашем README </p>
-
 <h4>Реализованная функциональность</h4>
 <ul>
-    <li>Функционал 1;</li>
-    <li>Функционал 2;</li>
-    <li>Функционал 3;</li>
+    <li>Возможность просмотра и выбора мест на карте, списком или в функционале рекомендаций;</li>
+    <li>Синхронизация данных в реальном времени;</li>
+    <li>Возможность создания собственного объекта;</li>
 </ul> 
 <h4>Особенность проекта в следующем:</h4>
 <ul>
- <li>Киллерфича-1;</li>
- <li>Киллерфича-2;</li>
- <li>Киллерфича-3;</li>  
+ <li>Функционал рекомендаций по интересам пользователя;</li>
+ <li>Сихронизация данных в реальном времени;</li>
  </ul>
 <h4>Основной стек технологий:</h4>
 <ul>
-    <li>LAMP/LEMP/FAMP/FEMP.</li>
-	<li>HTML, CSS, JavaScript, TypeScript.</li>
-	<li>PHP 7, MySQL.</li>
-	<li>Symfony, Laravel, Zend Framework, Yii, Kohana.</li>
-	<li>LESS, SASS, PostCSS.</li>
-	<li>Gulp, Webpack, Babel.</li>
-	<li>БЭМ.</li>
-	<li>React (Next.js), Vue (Nuxt.js), Angular.</li>
-	<li>Git, Mercurial.</li>
-	<li>Jenkins, Gitlab.</li>
+	<li>Kotlin, Java</li>
+	<li>Firebase, SQLite</li>
+	<li>GoogleMapsAPI, Git</li>
   
  </ul>
 <h4>Демо</h4>
