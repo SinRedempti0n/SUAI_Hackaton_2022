@@ -58,12 +58,14 @@ class DashboardFragment : Fragment(), OnMapReadyCallback {
                 var id = "0"
                 val cord = LatLng(data.child("latitude").getValue().toString().toDouble(), data.child("longitude").getValue().toString().toDouble())
                 points.add(cord)
-                mMap.addMarker(MarkerOptions().position(cord).title(data.child("name").getValue().toString()))
+                mMap.addMarker(MarkerOptions().position(cord).title(
+                    data.child("name").getValue().toString())
+                )
 
                 var history = data.child("history").getValue().toString()
                 val sydney = LatLng(58.422, 32.3836)
             }
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(points[0]))
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(58.52517593166956, 31.273686997420548), 10f))
         }.addOnFailureListener{
             Log.e("firebase", "Error getting data", it)
         }
