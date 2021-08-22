@@ -13,31 +13,39 @@ import com.example.hackaton.databinding.FragmentNotificationsBinding
 
 class NotificationsFragment : Fragment() {
 
-  private lateinit var notificationsViewModel: NotificationsViewModel
-private var _binding: FragmentNotificationsBinding? = null
-  // This property is only valid between onCreateView and
-  // onDestroyView.
-  private val binding get() = _binding!!
+    private lateinit var notificationsViewModel: NotificationsViewModel
+    private var _binding: FragmentNotificationsBinding? = null
 
-  override fun onCreateView(
-    inflater: LayoutInflater,
-    container: ViewGroup?,
-    savedInstanceState: Bundle?
-  ): View? {
-    notificationsViewModel =
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        notificationsViewModel =
             ViewModelProvider(this).get(NotificationsViewModel::class.java)
 
-    _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
-    val root: View = binding.root
+        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        val root: View = binding.root
 
-    val textView: TextView = binding.textView
-    notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
-      textView.text = it
-    })
-    return root
-  }
+//    val textView: TextView = binding.history
+//    notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
+//      textView.text = it
+//    })
 
-override fun onDestroyView() {
+        var textView: TextView = root.findViewById(R.id.bigName)
+        textView.text = "sample"
+
+        var textView2: TextView = root.findViewById(R.id.history)
+        textView2.text = "w\ni\n \ng\nm\ng\ng\nf\nh\nw\ni\n \ng\nm\ng\ng\nf\nh\nw\ni\n \ng\nm\ng\ng\nf\nh\n"
+
+        return root
+    }
+
+    override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
