@@ -77,14 +77,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
-                    android:text="@string/action_1" />
+                    android:text="@string/action_1"
+                    android:textColor="#2E7D32" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/buttonSecondary"
                     style="?attr/borderlessButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/action_2" />
+                    android:text="@string/action_2"
+                    android:textColor="#C62828" />
             </LinearLayout>
 
         </LinearLayout>

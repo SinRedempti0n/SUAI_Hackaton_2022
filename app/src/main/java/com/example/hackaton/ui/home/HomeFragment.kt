@@ -58,7 +58,7 @@ class HomeFragment : Fragment() {
     private fun fillList(): List<Place> {
         val data = mutableListOf<Place>()
         for(i in 1..5){
-            data.add(Place("id", "Name", 10.0 , 20.0, "Blank"))
+            data.add(Place("id", "Name", 10.0 , 20.0, "Blank", "---"))
         }
         return data
     }
@@ -73,8 +73,8 @@ class HomeFragment : Fragment() {
                 var lon = data.child("longitude").getValue().toString().toDouble()
                 var lat = data.child("latitude").getValue().toString().toDouble()
                 var history = data.child("history").getValue().toString()
-                listData.add(Place(id, name, lon, lat, history))
-                list.add(Place(id, name, lon, lat, history))
+                var url = data.child("url").getValue().toString()
+                list.add(Place(id, name, lon, lat, history, url))
             }
             recyclerView.adapter = CustomRecyclerAdapter(list)
         }.addOnFailureListener{
