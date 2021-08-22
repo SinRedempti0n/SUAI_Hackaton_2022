@@ -37,5 +37,5 @@
 ------------
 <h4>Лазарев Артемий fullstack mobile https://t.me/SinRedemption </h4>
 <h4>Лазарев Артемий fullstack mobile https://t.me/SinRedemption </h4>
-<h4>Гагин Ярослав DB Architect https://t.me/SinRedemption </h4>
+<h4>Гагин Ярослав DB Architect https://t.me/Privet0309 </h4>
 
